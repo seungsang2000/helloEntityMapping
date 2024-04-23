@@ -36,10 +36,7 @@ public class Instructor {
         this.email = email;
     }
 
-    @OneToMany(mappedBy = "instructor",
-            fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE,
-                    CascadeType.DETACH, CascadeType.REFRESH})
+    @OneToMany(mappedBy = "instructor", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private List<Course> courses = new ArrayList<>();
 
 
